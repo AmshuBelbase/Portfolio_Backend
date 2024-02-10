@@ -8,13 +8,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 // Enable cors at the server side.
 const corsOption = {
-  origin: ["http://localhost:3000"],
+  origin: ["http://10.3.116.24:3000"],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 };
 app.use(cors(corsOption));
 mongoose
-  .connect("mongodb://localhost:27017/PortfolioDB")
+  .connect("mongodb://10.3.116.24:27017/PortfolioDB")
   .then(() => {
     console.log("Connected to MongoDB");
   })
